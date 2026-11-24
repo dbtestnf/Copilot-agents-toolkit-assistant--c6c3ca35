@@ -1,0 +1,42 @@
+<evaluation>
+  <qa_pair>
+    <question>Using the m365_create_declarative_agent tool, create an agent named "IT Helpdesk" with description "Handles internal IT support requests" and capabilities web_search and microsoft_graph. What is the $schema URL in the generated manifest?</question>
+    <answer>https://developer.microsoft.com/json-schemas/copilot/declarative-agent/v1.0/schema.json</answer>
+  </qa_pair>
+  <qa_pair>
+    <question>Use m365_validate_agent_manifest to validate a manifest that has version "v1.0", name "Test", description "Test agent", and $schema set to "https://wrong-url.com/schema.json". How many errors are reported?</question>
+    <answer>1</answer>
+  </qa_pair>
+  <qa_pair>
+    <question>Using m365_list_capabilities, how many distinct capabilities are available for M365 declarative agents?</question>
+    <answer>4</answer>
+  </qa_pair>
+  <qa_pair>
+    <question>Use m365_create_adaptive_card with card_type "approval", title "Budget Request", requestor "Alice", and amount "$2000". What is the action type of the first action button in the generated card?</question>
+    <answer>Action.Submit</answer>
+  </qa_pair>
+  <qa_pair>
+    <question>Using m365_create_workflow with name "Doc Review", triggers ["document_uploaded"], and actions ["request_approval", "send_notification"], what is the type value of the first trigger in the output?</question>
+    <answer>OnFileCreated</answer>
+  </qa_pair>
+  <qa_pair>
+    <question>Use m365_create_teams_bot_config with name "Meeting Bot" and features ["meeting_scheduling", "notes_taking"]. What is the manifestVersion in the generated manifest?</question>
+    <answer>1.17</answer>
+  </qa_pair>
+  <qa_pair>
+    <question>Using m365_list_store_templates sorted by rating, what is the template ID of the highest-rated template?</question>
+    <answer>customer-support</answer>
+  </qa_pair>
+  <qa_pair>
+    <question>Use m365_get_authentication_types. What is the best_practice recommendation for the OAuthPluginVault authentication type?</question>
+    <answer>Recommended for production deployments</answer>
+  </qa_pair>
+  <qa_pair>
+    <question>Using m365_get_deployment_checklist, how many total deployment steps are listed?</question>
+    <answer>6</answer>
+  </qa_pair>
+  <qa_pair>
+    <question>Use m365_get_common_patterns. What is the name of the pattern identified by the key "task_automation"?</question>
+    <answer>Task Automation Agent</answer>
+  </qa_pair>
+</evaluation>
